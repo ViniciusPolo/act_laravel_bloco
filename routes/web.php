@@ -21,7 +21,7 @@ Route::post('/signin', [AuthController::class, 'signin'])->name('signin');
 Route::post('/signup', [AuthController::class, 'signup'])->name('signup');
 Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 
-Route::get('/', [PostController::class, 'index'])->name('dashboard')->middleware('auth');//chamando o PostController
+Route::get('/posts', [PostController::class, 'index'])->name('dashboard')->middleware('auth');//chamando o PostController
 
 Route::get('/posts/create', [PostController::class, 'create']);
 
